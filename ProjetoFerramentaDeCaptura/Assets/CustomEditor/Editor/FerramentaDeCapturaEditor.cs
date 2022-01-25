@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
-
 public class FerramentaDeCapturaEditor : ScriptableWizard
 {
 	#region Variáveis ocultas
-	
 	Object[] itemsPrefabs;
 	public GameObject camera, spawn;
 	public int width, height;
@@ -109,10 +107,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
             OnWizardCreate();
         }
 
-		if (GUILayout.Button("Deletar Pasta", GUILayout.MaxWidth(90)))
+		/* if (GUILayout.Button("Deletar Pasta", GUILayout.MaxWidth(90)))
         {
             OnWizardErase();
-        }
+        } */
 
         EditorGUILayout.EndHorizontal();
 
@@ -174,18 +172,18 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			string primaryFolder = AssetDatabase.CreateFolder("Assets", nomeDaPasta);
 		}
 	}
-	void OnWizardErase()
+	/* void OnWizardErase()
     {
         //Passa longe disso! %$#@ Apagou toda pasta assets do projeto! &%$#@
-		/* if(Directory.Exists("Assets" + "/" + nomeDaPasta))
+		if(Directory.Exists("Assets" + "/" + nomeDaPasta))
 		{
 			bool deleteFolder = AssetDatabase.DeleteAsset("Assets" + "/" + nomeDaPasta);
 		}
 		else
 		{
 			Debug.Log("Directory Not Founded exception!");
-		} */
-    }
+		}
+    } */
 	private void SpawnItems()
 	{
 		if(itemsPrefabs == null)
@@ -218,7 +216,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	}
     private void GenerateImages()
     {
-		if(camera.GetComponent<ScreenShoot>() != null)
+		if(camera.gameObject.GetComponent<ScreenShoot>() != null)
     		camera.GetComponent<ScreenShoot>().TakeScreenShoot(width, height, itemId, spawn.transform, nomeDaPasta);
 		else
 		{
@@ -227,7 +225,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
     }
 	private void SetParameters()
 	{
-		spawn = GameObject.FindGameObjectWithTag("PosicaoDeCapturaPadrao");
+		spawn = GameObject.FindGameObjectWithTag("Spawn");
 		nomeDaPasta = "IconesTOS";
 		prefabsPathName = "Items";
 		camera = Camera.main.gameObject;

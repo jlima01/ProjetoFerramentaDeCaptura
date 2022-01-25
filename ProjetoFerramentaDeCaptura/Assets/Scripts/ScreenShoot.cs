@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
 public class ScreenShoot : MonoBehaviour
 {
-	int width, height;
+    int width, height;
 	string folderName;
 	public string itemId;
 	private GameObject itemObj;
