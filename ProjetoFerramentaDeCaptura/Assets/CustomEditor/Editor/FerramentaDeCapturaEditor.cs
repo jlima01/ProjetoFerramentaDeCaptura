@@ -216,7 +216,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	}
     private void GenerateImages()
     {
-		if(camera.gameObject.GetComponent<ScreenShoot>() != null)
+		if(camera.GetComponent<ScreenShoot>() != null)
     		camera.GetComponent<ScreenShoot>().TakeScreenShoot(width, height, itemId, spawn.transform, nomeDaPasta);
 		else
 		{
@@ -229,6 +229,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		nomeDaPasta = "IconesTOS";
 		prefabsPathName = "Items";
 		camera = Camera.main.gameObject;
+
+		if(camera.GetComponent<ScreenShoot>() == null)
+		{
+			camera.AddComponent<ScreenShoot>();
+		}
+		
 		width = 1024;
 		height = 1024;
 	}
