@@ -178,3 +178,7 @@ Received Import Request.
   path: Assets/_ThirdParty/3D Models/Weapons/MedievalSwordsPack/Assets/Swords/Sword6/Sword6Material/Sword6LOD_MetallicSmoothness.png
   artifactKey: Guid(8fae968757d84044fa98edfa94c49fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/_ThirdParty/3D Models/Weapons/MedievalSwordsPack/Assets/Swords/Sword6/Sword6Material/Sword6LOD_MetallicSmoothness.png using Guid(8fae968757d84044fa98edfa94c49fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba5057f8b56f1ef614de6b93df15584d') in 0.043302 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
